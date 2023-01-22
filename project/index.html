@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="resetCSS" href="resetCSS.css"/>
+        <script src="backgroundName.js"></script>
+        <script src="matrixEffect.js"></script>
+        <script src="AboutSectionFunctionality.js"></script>
+        <script src="mobileMenu.js"></script>
+        <script src="https://kit.fontawesome.com/ad45123ccc.js" crossorigin="anonymous"></script>
+        <script src="contactformfunctionality.js"></script>
+        <script src="backtotopbutton.js"></script>
+        <title>Portfolio Website</title>
+    </head>
+    <body>
+        <!-------------- header -------------->
+        <header class = "parallax-header" id = "header-link">
+            <div class="container">
+                <nav>
+                    <img src="images/logo1.png" class="logo" alt = "Logo Picture"/>
+                    <ul id="sidemenu">
+                        <li><i class="fa-sharp fa-solid fa-xmark" onclick = "closemenu()"></i></li>
+                        <li><a href="#header-link">Home</a></li>
+                        <li><a href="#interests-link">Interests</a></li>
+                        <li><a href="#projects-link">Projects</a></li>
+                        <li><a href="#about-link">About</a></li>
+                        <li><a href="#contacts-link">Contact</a></li>
+                    </ul>
+                    <i class="fa-sharp fa-solid fa-bars" onclick = "openmenu()"></i> 
+                </nav>
+                <div class="header-text">
+                    <div class="wrapper">
+                        <h1>Hi, I'm Boyan Atanasov.</h1>
+                    </div>
+                    <p>Student, soon to be Developer.</p>
+                </div>
+            </div>
+        </header>
+        <!-------------- interests section -------------->
+        <section class="interests" id = "interests-link">
+            <div class="container">
+                <h1 class = "section-subtitle">My Interests</h1>
+                <div class="interests-list">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-dumbbell"></i> 
+                        <h2>Training</h2>
+                        <p> I'm a big advocate for staying fit, so going to the gym or just working out, is a big passion for me. And i suggest you do the same! We can't only go by sitting in our chair coding all day. </p>
+                        <a href="#">Learn more</a> 
+                    </div>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-terminal"></i> 
+                        <h2>Coding</h2>
+                        <p> Coding has become a recent big interest for me, before it was very alien, since i had never coded in my life. But now i'm completely hooked and i'm always looking for new projects to work on. </p>
+                        <a href="#">Learn more</a> 
+                    </div>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-calculator"></i> 
+                        <h2>Computer Science</h2>
+                        <p> The thing is, being a programmer is not only about writing code, it's also about understanding the concepts behind it. And that's why i'm always looking for new ways to learn more about computer science. Data structures, algorithms, math, you name it. </p>
+                        <a href="#">Learn more</a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------------- about -------------->
+        <section class="about" id = "about-link">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <canvas id="Matrix"></canvas>
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="about-subtitle">About Me</h1>
+                        <p>
+                            I'm a second year student currently studying Informatics at New Bulgarian University in Sofia. I'm currently looking for an internship in the field of web or software development. <br><br>
+                            Here you can read a little bit more about me :) <br><br>
+                            (while you enjoy this cool matrix effect :D) 
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick = "opentab(event,'skills')">Skills</p>
+                            <p class="tab-links" onclick = "opentab(event,'experience')">Experience</p>
+                            <p class="tab-links" onclick = "opentab(event,'education')">Education</p>
+                            <p class="tab-links" onclick = "opentab(event,'lifestory')">Life Story</p>
+                        </div>
+                        <div class="tab-contents active-tab" id = "skills">
+                            <ul>
+                                <li>
+                                    <span>Photoshop</span><br>Self-taught basic to advanced design skills
+                                </li>
+                                <li>
+                                    <span>C++</span><br>Working with basics, OOP and data structures in C++
+                                </li>
+                                <li>
+                                    <span>Data Structures</span><br>Familiar with many concepts, a lot of theoretical knowledge, able to implement the standard data structures and algorithms.
+                                </li>
+                                <li>
+                                    <span>Basic HTML,CSS,JS skills</span><br>Familiar with the basic principles of the three languages, was able to make this website with those skills.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id = "experience">
+                            <ul>
+                                <li>
+                                    <span>Working Experience</span><br>No previous working experience at an official job.
+                                </li>
+                                <li>
+                                    <span>University</span><br>Working with programming basics, OOP concepts, Data Structures and Algorithms, Discrete math, Basic statistics.
+                                </li>
+                                <li>
+                                    <span>Events</span><br>Won second place at AI&AI Factory Hackathon hosted by the company DNA, with a Computer Vision solution, gained basic experience working with the OpenCV computer vision library.
+                                </li>
+                                <li>
+                                    <span>Courses</span><br>Attended several courses in the computer science field, online mostly. Data strucutes, HTML CSS JS courses by freecodecamp.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id = "education">
+                            <ul>
+                                <li>
+                                    <span>HighSchool Education - 2009 - 2021</span><br>Friedrich Schiller Gymnasium in Ruse, Bulgaria with English and German
+                                </li>
+                                <li>
+                                    <span>New Bulgarian University - 2021 - 2024</span><br>Bachelor of Informatics, currently 2nd year, 3rd semester.
+                                </li>
+                                <li>
+                                    <span>Softuni</span><br>Some courses regarding C++, Javascript and so on.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id = "lifestory">
+                            <ul>
+                                <li>
+                                    <span>A little bit about my path in life.</span><br>I'm a second year student currently studying Informatics at New Bulgarian University in Sofia. I'm originally from the city of Ruse in the north-east of Bulgaria, a year and a half ago I moved to Sofia to study. It was hard moving to a completely new place at the age of 19, far away from family and friends, but I adapted quickly, but these days i'm completely used to it and i feel great! <br><br>
+                                    I originally come from a language highschool and I started my journey with programming without any prior experience, in my first year in university. But i have been working hard to catch up to my peers. <br><br>
+                                    The benefit of my highschool is that now i speak two foreign languages, English at C2 level - fluently and German at B2/C1 - profficently. <br><br>
+                                    I'm currently looking for an internship in the field of web or software development. I'm a fast learner and I'm always eager to learn new things. I'm a hard worker and I'm always willing to put in the extra effort to get the job done. I'm a team player and I'm always willing to help my teammates.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------------projects section------------------->
+        <section class="projects" id = "projects-link">
+            <div class = "container">
+                <h1 class = "section-subtitle">My Projects</h1>
+                <div class = "project-list">
+                    <div class = "project">
+                        <img src="images/work-1.png" alt = "An image for a simple tic-tac-toe game i made in C++">
+                        <div class = "layer">
+                            <h3>TicTacToe Game</h3>
+                            <p>This is just an older starter project I made in C++, it doesn't have a graphical interface because I was just starting out with the language. But it's a fully functional game.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class = "project">
+                        <img src="images/work-2.png" alt = "A picture of a prototype of a facial recognition software that i made">
+                        <div class = "layer">
+                            <h3>OpenCV Body and Facial Recognition</h3>
+                            <p>This is a computer vision concept that we made for a Hackathon I attended, we made it using OpenCV and mediapipe python libraries, it was just a proof-of-concept, it uses ready-made libraries and is 90% copied code. I had 0 knowledge of python before that.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class = "project">
+                        <img src="images/work-3.png" alt = "Blank filler image">
+                        <div class = "layer">
+                            <h3>Future Project Slot</h3>
+                            <p>I will post any future projects that i'd like to show off here. For now, they are a work in progress.</p>
+                            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button">See more</a> 
+            </div>
+        </section>
+        <!-------------contacts section------------------->
+        <section class="contacts" id = "contacts-link">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Leave an email</h1>
+                        <p><i class="fa-sharp fa-solid fa-envelope"></i>bojan.atanasov2002@gmail.com</p>
+                        <p><i class="fa-sharp fa-solid fa-phone"></i>0882726033</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/bojan.atanasov.7/"><i class="fa-sharp fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-sharp fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/boqan_/"><i class="fa-sharp fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/boqan_/"><i class="fa-sharp fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="images/BoyanAtanasovCV2023.pdf" download class="button button2">Download CV</a> 
+                    </div>
+                    <div class="contact-right">
+                        <form name = "submit-to-google-sheet">
+                            <input type="text" name = "Name" placeholder="Your Name here" required>
+                            <input type="email" name = "email" placeholder = "Your email here" required>
+                            <textarea name = "Message" rows="6" placeholder = "Your message here" required></textarea>
+                            <button type = "submit" class="button button2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class ="footer">
+            <div class="container">
+                <p>Boyan Atanasov &copy; 2021</p>
+                <a href="#header-link" class="back-to-top">Back to Top</a> 
+            </div>
+        </footer>
+    </body>
+</html>
